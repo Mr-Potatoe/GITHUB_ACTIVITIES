@@ -133,7 +133,7 @@ Remaining Stock: {Phone: 0, Shirt: 4, Bread: 10}
 
 ---
 
-## 🧾 **GROUP 6 – Library Book Borrowing & Return System v2**
+## 🧾 **GROUP 6 – Library Book Borrowing & Return System**
 
 **Goal:** Create a simple library system that manages books, borrowers, and due dates.
 **Concepts:** Variables, Lists, Dictionaries, Control Structures, Functions, Loops
