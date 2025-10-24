@@ -133,27 +133,62 @@ Remaining Stock: {Phone: 0, Shirt: 4, Bread: 10}
 
 ---
 
-## 🚦 **GROUP 6 – Smart Traffic Light Simulation**
+## 🧾 **GROUP 6 – Library Book Borrowing & Return System v2**
 
-**Goal:** Simulate traffic light logic with pedestrian control and night mode.
-**Concepts:** Loops, Functions, If-Else, Time Control
+**Goal:** Create a simple library system that manages books, borrowers, and due dates.
+**Concepts:** Variables, Lists, Dictionaries, Control Structures, Functions, Loops
 
-**New Features:**
+**Features:**
 
-* Function `traffic_cycle(mode)` handles standard or night mode.
-* Standard: Red (5s), Green (3s), Yellow (2s)
-* Night mode: Blinking Yellow every 1s
-* Add a **pedestrian button simulation** (if pressed, extend red for 3s).
-* Run 3 full cycles and display total elapsed time.
+* Store available books in a **dictionary** with copies left.
+* Function `borrow_book(name, title)` checks if the book exists and is available.
+* Function `return_book(name, title)` adds the copy back and calculates any **late fee**.
+* Record transactions in a **list of dictionaries** with borrower name, book title, and status.
+* Apply a **fine** of ₱10 per day if overdue (simulate with user input).
+* Add menu options: View Books, Borrow, Return, View Records, Exit.
+
+---
+
+**Instructions:**
+
+1. Display available books with copies.
+2. Use a **while loop** to show options repeatedly.
+3. On borrowing:
+
+   * Check if stock > 0
+   * If yes, decrease stock and log the transaction
+4. On returning:
+
+   * Ask how many days late (if any)
+   * Compute fine = days * 10
+   * Add the copy back to inventory
+5. On exit, display a summary of all transactions and remaining books.
+
+---
 
 **Sample Flow:**
 
 ```
-Cycle 1:
-Red 5s → Pedestrian pressed → +3s
-Green 3s → Yellow 2s
-Cycle 2...
-Total Simulation Time: 30 seconds
+Available Books:
+{"Python 101": 3, "AI Basics": 2, "Data Mining": 1}
+
+1. Borrow Book
+2. Return Book
+3. View Records
+4. Exit
+
+Choice: 1
+Name: Aria | Book: Python 101
+Book borrowed successfully!
+
+Choice: 2
+Name: Aria | Book: Python 101 | Days Late: 2
+Returned successfully. Fine: ₱20
+
+--- Summary ---
+Borrowed: Python 101 by Aria
+Returned: Python 101 | Fine: ₱20
+Remaining Books: {"Python 101": 3, "AI Basics": 2, "Data Mining": 1}
 ```
 
 ---
